@@ -1,7 +1,6 @@
 import { Box, Grid, GridItem, Flex, propNames, Text } from "@chakra-ui/react";
 import React from "react";
 
-
 export enum GUITAR_STRINGS {
   E_top = 1,
   A,
@@ -24,30 +23,25 @@ type chordProps = {
 export const Tabs = (prop: chordProps) => {
   const beatsPerMeaure = 16;
   const linesPerMeaure = 6;
-  var measure = '';
-  var line = '|';
+  var measure = "";
+  var line = "|";
   var lines = [];
   var lineCount = 6;
   for (let i = 0; i < beatsPerMeaure; i++) {
-    measure += '-'
+    measure += "-";
   }
   for (let j = 0; j < linesPerMeaure; j++) {
     line += measure;
     line += "|";
   }
   for (let k = 0; k < lineCount; k++) {
-    lines.push(line)
+    lines.push(line);
   }
   return (
     <Text>
       {lines.map((line) => {
-        return (
-          <Text>
-            {line}
-          </Text>
-        )
-      })
-      }
-      </Text>
-  )
+        return <Text>{line}</Text>;
+      })}
+    </Text>
+  );
 };
