@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Homepage } from "./Homepage";
+
+import Homepage from "./Homepage";
 import {
   AChord,
   BChord,
@@ -15,13 +16,15 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import { ChordList } from "./pages/ChordList";
-import { SongTitle } from "./pages/SongTitle";
+import ChordList from "./pages/ChordList";
+import SongTitle from "./pages/SongTitle";
 import { Tabs } from "./components/Tabs";
 import { GUITAR_STRINGS } from "./components/Tabs";
-import { SongList } from "./pages/SongList";
-import { SongPage } from "./components/SongPage";
-export const App = () => {
+import SongList from "./pages/SongList";
+import SongPage from "./components/SongPage";
+import Page from "./components/Page";
+
+const App = () => {
   const [isLoggedIn] = useState(false);
 
   return (
@@ -42,31 +45,31 @@ export const App = () => {
           <Route
             path="Song_1"
             element={
-              <SongPage SongTitle={"Song 1"} SongDescription={"Song 1"} />
+              <SongPage SongTitle={"Song 1"} SongDescription={"Rock Song"} />
             }
           />
           <Route
             path="Song_2"
             element={
-              <SongPage SongTitle={"Song 2"} SongDescription={"Song 2"} />
+              <SongPage SongTitle={"Song 2"} SongDescription={"Rhythm and Blues Song"} />
             }
           />
           <Route
             path="Song_3"
             element={
-              <SongPage SongTitle={"Song 3"} SongDescription={"Song 3"} />
+              <SongPage SongTitle={"Song 3"} SongDescription={"Jazz Song"} />
             }
           />
           <Route
             path="Song_4"
             element={
-              <SongPage SongTitle={"Song 4"} SongDescription={"Song 4"} />
+              <SongPage SongTitle={"Song 4"} SongDescription={"Reggae Song"} />
             }
           />
           <Route
             path="Song_5"
             element={
-              <SongPage SongTitle={"Song 5"} SongDescription={"Song 5"} />
+              <SongPage SongTitle={"Song 5"} SongDescription={"Heavy Metal Song"} />
             }
           />
           <Route
@@ -86,3 +89,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;

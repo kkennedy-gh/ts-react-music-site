@@ -1,8 +1,11 @@
-import { Header } from "../components/Header";
+import React from "react";
+
+import Header from "../components/Header";
 import { Box, Image, Button, Link, Heading } from "@chakra-ui/react";
 import { Tabs } from "../components/Tabs";
+import Page from "../components/Page";
 
-export const SongTitle = () => {
+const SongTitle = () => {
   return (
     <Box width="100%">
       <Header />
@@ -11,3 +14,5 @@ export const SongTitle = () => {
     </Box>
   );
 };
+
+export default SongTitle;

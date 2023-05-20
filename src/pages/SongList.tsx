@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { Box, Image, Button, Link, Heading } from '@chakra-ui/react';
+import Page from "../components/Page";
 
-export const SongList = () => {
+const SongList = () => {
   return (
     <Box width="100%">
       <Heading textAlign="center" width="100%">

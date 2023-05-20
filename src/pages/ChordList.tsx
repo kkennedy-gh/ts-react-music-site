@@ -1,7 +1,8 @@
-import { Header } from "../components/Header";
+import Header from "../components/Header";
 import { Box, Image, Button, Link } from "@chakra-ui/react";
+import Page from "../components/Page";
 
-export const ChordList = () => {
+const ChordList = () => {
   return (
     <Box width="100%">
       <Header />
@@ -45,3 +46,5 @@ export const ChordList = () => {
     </Box>
   );
 };
+
+export default ChordList;

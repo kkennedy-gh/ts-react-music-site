@@ -1,10 +1,9 @@
-import { Header } from './components/Header';
-import { Box, Image, Button, Link } from '@chakra-ui/react'
+import { Box, Image, Button, Link } from '@chakra-ui/react';
+import Page from './components/Page';
 
-export const Homepage = () => {
+const Homepage = () => {
     return (
-      <Box width="100%">
-        <Header />
+      <Page>
           <Box boxSize="sm" margin="auto">
           <Image src="a_chord_new.jpg" alt="A chord" />
           <Link href="ChordList">
@@ -14,8 +13,8 @@ export const Homepage = () => {
             <Button display="block" margin="auto">Go to Songs</Button>
           </Link>
         </Box>
-      </Box>
+     </Page>
     );
 }
 
-    
+export default Homepage;    
