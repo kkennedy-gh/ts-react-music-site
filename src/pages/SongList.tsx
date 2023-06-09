@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Box, Image, Button, Link, Heading } from '@chakra-ui/react';
+import { Button, Link, Heading, VStack } from '@chakra-ui/react';
 import Page from "../components/Page";
 
 const SongList = () => {
   return (
-    <Box width="100%">
-      <Heading textAlign="center" width="100%">
-        Song List
-      </Heading>
-      <Box boxSize="sm" margin="auto">
+    <Page>
+      <VStack>
+        <Heading textAlign="center" width="100%">
+          Song List
+        </Heading>
         <Link href="Song_1">
           <Button display="block" margin="auto">
             Song 1
@@ -35,8 +35,8 @@ const SongList = () => {
             Song 5
           </Button>
         </Link>
-      </Box>
-    </Box>
+      </VStack>
+    </Page>
   );
 };
 

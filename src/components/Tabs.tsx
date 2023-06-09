@@ -4,7 +4,7 @@ import { Box, Grid, GridItem, Flex, propNames, Text } from "@chakra-ui/react";
 import Page from "../components/Page";
 
 export enum GUITAR_STRINGS {
-  E_top = 1,
+  E = 1,
   A,
   D,
   G,
@@ -18,27 +18,33 @@ type Note = {
   FingerNumber: number;
 };
 
-type chordProps = {
+export type tabProps = {
   notes: Note[];
 };
 
-export const Tabs = (prop: chordProps) => {
+export const Tabs = (prop: tabProps) => { /**check bpm */
   const beatsPerMeaure = 16;
   const linesPerMeaure = 6;
   var measure = "";
   var line = "|";
   var lines = [];
   var lineCount = 6;
-  for (let i = 0; i < beatsPerMeaure; i++) {
-    measure += "-";
-  }
-  for (let j = 0; j < linesPerMeaure; j++) {
-    line += measure;
-    line += "|";
-  }
-  for (let k = 0; k < lineCount; k++) {
+  
+  for (let linetab = 0; linetab < lineCount; linetab++) {
+    line = "|";
+  
+    for (let newtab = 0; newtab < linesPerMeaure; newtab++) {
+      measure = "";
+    
+      for (let stringline = 0; stringline < beatsPerMeaure; stringline++) {
+        measure += "-";
+      }
+      line += measure;
+      line += "|";
+    }
     lines.push(line);
   }
+
   return (
     <Text>
       {lines.map((line) => {
@@ -47,3 +53,5 @@ export const Tabs = (prop: chordProps) => {
     </Text>
   );
 };
+
+

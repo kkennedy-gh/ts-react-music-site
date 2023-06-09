@@ -11,8 +11,8 @@ type PageProps = {
 }
 
 const Page = ({children} : PageProps) => {
-    return (
-      <Box width="100%" bg='blue'>
+  return (
+      <Box width="100%" minH={"100vh"} bg="lightblue">
         <Header />
         {children}
       </Box>

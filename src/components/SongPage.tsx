@@ -1,22 +1,22 @@
 import React from 'react';
 
-import Header from './Header'
 import Page from "../components/Page";
-import { Box, Image, Button, Link, Heading, Text } from '@chakra-ui/react';
+import { Box, Image, Button, Link, Heading, Text, Tab } from '@chakra-ui/react';
+import { Tabs, tabProps } from '../components/Tabs';
 
-type SongPageProps = {SongTitle: string, SongDescription: string};
+type SongPageProps = { SongTitle: string, SongDescription: string, TabProps: tabProps};
 
-const SongPage = ({ SongTitle, SongDescription }: SongPageProps) => {
+const SongPage = ({ SongTitle, SongDescription, TabProps }: SongPageProps) => {
     return (
-      <Box width="100%">
-        <Header />
+      <Page>
         <Heading as="h5" size="sm" textAlign="center" width="100%">
           {SongTitle}
         </Heading>
-        <Box boxSize="sm" margin="auto">
+        <Box boxSize="xl" margin="auto">
           <Text>{SongDescription}</Text>
+          <Tabs {...TabProps} />
         </Box>
-      </Box>
+      </Page>
     );
 }
 

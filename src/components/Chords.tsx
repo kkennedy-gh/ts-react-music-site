@@ -4,12 +4,12 @@ import { Box, Grid, GridItem, Flex, propNames } from "@chakra-ui/react";
 import Page from "../components/Page";
 
 export enum GUITAR_STRINGS {
-  E_top = 1,
+  E = 1,
   A,
   D,
   G,
   B,
-  E /** auto-incremting enum **/,
+  E_high /** auto-incremting enum **/
 }
 
 type Note = {
